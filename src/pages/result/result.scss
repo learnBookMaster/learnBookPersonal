@@ -1,0 +1,18 @@
+page-result {
+  .successCheck{
+    color: green;
+  }
+
+  .errorCheck{
+    color: red;
+  }
+
+  .successCheck,.errorCheck{
+    font-size: 70px;
+  }
+
+  ion-row{
+    text-align: center;
+    font-size: 30px;
+  }
+}

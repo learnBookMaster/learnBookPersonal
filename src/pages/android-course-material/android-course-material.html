@@ -1,0 +1,121 @@
+<!-- Architecture -->
+<div *ngIf="subTopic=='Architecture'">
+<p>
+  Android operating system is a stack of software components, which is roughly divided into five sections and four main layers as shown below in the architecture diagram.
+</p>
+<img src="../assets/imgs/androidArchitecture.jpg">
+
+<h3>Linux kernel</h3>
+<p>
+  This provides a level of abstraction between the device hardware and it contains all the essential hardware drivers like camera, keypad, display etc. 
+</p>
+<h3>Libraries</h3>
+<p>
+  Includes open-source Web browser engine WebKit, well known library libc, SQLite database which is a useful repository for storage and sharing of application data, libraries to play and record audio and video, SSL libraries responsible for Internet security
+</p>
+<h3>Android Runtime</h3>
+<p>
+  Provides a key component called Dalvik Virtual Machine, which makes use of Linux core features like memory management and multi-threading, which is intrinsic in the Java language, and also provides a set of core libraries which enable Android application developers to write Android applications using standard Java programming language.
+</p>
+<h3>Application Framework</h3>
+<p>
+  The Application Framework layer provides many higher-level services to applications in the form of Java classes.
+</p>
+<h3>Applications</h3>
+<p>
+  You will find all the Android application at the top layer. You will write your application to be installed on this layer only. Examples of such applications are Contacts Books, Browser, Games etc.
+</p>
+</div>
+<!-- Architecture Done -->
+
+<!-- Activities -->
+<div *ngIf="subTopic=='Activities'">
+  <p>
+    Android system initiates its program with in an Activity starting with a call on onCreate() callback method. There is a sequence of callback methods that start up an activity and a sequence of callback methods that tear down an activity as shown in the below Activity life cycle diagram
+  </p>
+  <p>
+    <img src="../assets/imgs/androidActivities.png">
+  </p>
+  <p>
+    <img src="../assets/imgs/androidActivities2.png">
+  </p>
+</div>
+<!-- Activities Done -->
+
+<!--Services-->
+<div *ngIf="subTopic=='Services'">
+  <p>
+    A service is a component that runs in the background to perform long-running operations without needing to interact with the user and it works even if application is destroyed.
+  </p>
+  <p>
+    A service can essentially take two states −
+  </p>
+  <p>
+    <img src="../assets/imgs/androidServices.png">
+  </p>
+  <p>
+    A service has life cycle callback methods that you can implement to monitor changes in the service's state and you can perform work at the appropriate stage
+  </p>
+  <p>
+    <img src="../assets/imgs/androidServices2.png">
+  </p>
+  <p>
+    <img src="../assets/imgs/androidServices3.png">
+  </p>
+</div>
+<!-- Services Done -->
+
+<!--Content Providers-->
+<div *ngIf="subTopic=='Content Providers'">
+  <p>
+    A content provider component supplies data from one application to others on request. Such requests are handled by the methods of the ContentResolver class. A content provider can use different ways to store its data and the data can be stored in a database, in files, or even over a network.
+  </p>
+  <p>
+    <img src="../assets/imgs/contentProvider.png">
+  </p>
+</div>
+<!-- Content Providers Done -->
+
+<!--Broadcast Receivers-->
+<div *ngIf="subTopic=='Broadcast Receivers'">
+  <p>
+    <strong>Broadcast Receivers</strong> simply respond to broadcast messages from other applications or from the system itself. These messages are sometime called events or intents. For example, applications can also initiate broadcasts to let other applications know that some data has been downloaded to the device and is available for them to use, so this is broadcast receiver who will intercept this communication and will initiate appropriate action.
+  </p>
+  
+  <p>
+    There are following two important steps to make BroadcastReceiver works for the system broadcasted intents −
+  </p>
+  <ul>
+    <li>Creating the Broadcast Receiver</li>
+    <li>Registering Broadcast Receiver</li>
+  </ul>
+  <h3>Creating the Broadcast Receiver</h3>
+  <p>
+    A broadcast receiver is implemented as a subclass of <strong>BroadcastReceiverclass</strong> and overriding the onReceive() method where each message is received as a <strong>Intent</strong> object parameter.
+  </p>
+  <h3>Registering Broadcast Receiver</h3>
+  <p>
+    An application listens for specific broadcast intents by registering a broadcast receiver in <i>AndroidManifest.xml</i> file. Consider we are going to register <i>MyReceiver</i> for system-generated event ACTION_BOOT_COMPLETED that is fired by the system once the Android system has completed the boot process.
+  </p>
+  <p>
+    <img src="../assets/imgs/broadcastReceiver.png">
+  </p>
+</div>
+<!-- Broadcast Receivers Done -->
+
+<!--Intents and Filters-->
+<div *ngIf="subTopic=='Intents and Filters'">
+  <p>
+    An Android <strong>Intent</strong> is an abstract description of an operation to be performed. It can be used with <strong>startActivity</strong> to launch an Activity, <strong>broadcastIntent</strong> to send it to any interested BroadcastReceiver components, and <strong>startService (Intent)</strong> or <strong>bindService (Intent, ServiceConnection, int)</strong> to communicate with a background Service.
+  </p>
+  <p>
+    For example, assume that you have an Activity that needs to open URL in a web browser on your Android device. For this purpose, your Activity will send ACTION_WEB_SEARCH Intent to the Android Intent Resolver to open given URL in the web browser. The Intent Resolver parses through a list of Activities and chooses the one that would best match your Intent, in this case, the Web Browser Activity. The Intent Resolver then passes your web page to the web browser and starts the Web Browser Activity.
+  </p>
+
+  <h3>Intent Filters</h3>
+  <p>
+    You have seen how Intent has been used to call another activity. Android OS uses filters to pinpoint the set of Activities, Services, and Broadcast receivers that can handle the Intent with help of specified set of action, categories, and data scheme associated with Intent. You will use <strong>&lt;intent-filter&gt;</strong> element in the manifest file to list down actions, categories and data types associated with any activity, service, or broadcast receiver.
+  </p>
+</div>
+<!-- Intents and Filters Done -->
+

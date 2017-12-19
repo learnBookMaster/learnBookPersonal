@@ -1,0 +1,34 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Test Result</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col col-12>
+        <div class="successMessage">{{message}}</div>
+      </ion-col>
+      <ion-col col-12>
+        <ion-icon name="{{imageSuccess}}" [class.errorCheck]="imageSuccess=='close-circle'" [class.successCheck]="imageSuccess=='checkmark-circle-outline'"></ion-icon>
+      </ion-col>
+      <ion-col col-12>
+        <div class="scoreMessage">Your Score is
+        {{markPercent}}%</div>
+      </ion-col>
+      <ion-col col-12>
+        <button ion-button icon-start small (click)="goHome()">
+          <ion-icon name="home"></ion-icon>
+          Return Home
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

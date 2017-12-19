@@ -1,0 +1,116 @@
+<!-- Introduction -->
+<div *ngIf="subTopic=='Introduction'">
+  <p>
+    Hybrid mobile apps are built with a combination of web technologies like HTML5, CSS3, and JavaScript, Angular JS/Angular 2, Bootstrap.
+  </p>
+  <p>
+    The key difference is that hybrid apps are hosted inside a native application that utilizes a mobile platform’s WebView. (You can think of the WebView as a chromeless browser window that’s typically configured to run fullscreen.) This enables them to access device capabilities such as the accelerometer, camera, contacts, and more.
+  </p>
+  <p>
+    Hybrid mobile apps can include native features in situations where necessary, by means of existing cordova plugins or custom plugins.
+  </p>
+  <p>
+    Hybrid mobile application development enables developers to target more than one platform.
+  </p>
+</div>
+<!-- Introduction Done -->
+
+<!-- Hybrid Mobile Application Architecture -->
+<div *ngIf="subTopic=='Hybrid Mobile Application Architecture'">
+  
+  <img src="../assets/imgs/HybridArchitecture.png">
+  <ul>
+    <li>
+      <strong>Web part: </strong>Where your web page like code resides. HTML5, CSS3, JavaScript, Angular JS/Angular 2, Bootstrap, images, or other files necessary to run it resides here.
+    </li>
+    <li><strong>WebView: </strong>WebView provides entire user interface to your app. Cordova applications are ordinarily implemented as a browser-based WebView within the native mobile platform.</li>
+    <li>
+      <strong>Plugins: </strong>Plugins are the coolest part of Cordova. It makes your app to work like native app. They provide an interface for Cordova and native components to communicate your JavaScript code to the native APIs. This enables you to invoke native code from JavaScript.
+    </li>
+  </ul>
+</div>
+<!-- Hybrid Mobile Application Architecture Done -->
+
+<!--Hybrid Mobile Application Development Tools-->
+<div *ngIf="subTopic=='Hybrid Mobile Application Development Tools'">
+  <p>
+    There are several frameworks available in market, which helps us build hybrid mobile apps. Few famous are listed below:
+  </p>
+  <ol type="a">
+    <li>React Native</li>
+    <li>Xamarin</li>
+    <li>Onsen UI</li>
+    <li>Kendo UI</li>
+    <li>Sencha Touch</li>
+    <li>Phonegap</li>
+    <li>Ionic</li>
+    <li>Framework 7</li>
+    <li>Kony</li>
+  </ol>
+</div>
+<!-- Hybrid Mobile Application Development Tools Done -->
+
+<!--RestFull Webservices to Fetch/Send Data-->
+<div *ngIf="subTopic=='RestFull Webservices to Fetch/Send Data'">
+  <p>
+    REST stands for REpresentational State Transfer. REST is a web standards based architecture and uses HTTP Protocol for data communication
+  </p>
+  <p>
+    REST Server simply provides access to resources and the REST client accesses and presents the resources. Here each resource is identified by URIs/ Global IDs.
+  </p>
+  <p>
+    The following HTTP methods are most commonly used in REST based architecture: 
+  </p>
+  <ul>
+    <li>
+      <strong>GET − </strong>Provides a read only access to a resource
+    </li>
+    <li>
+      <strong>PUT − </strong>Used to create a new resource.
+    </li>
+    <li>
+      <strong>DELETE − </strong>Used to remove a resource.
+    </li>
+    <li>
+      <strong>POST − </strong>Used to update an existing resource or create a new resource.
+    </li>
+    <li>
+      <strong>OPTIONS − </strong>Used to get the supported operations on a resource.
+    </li>
+  </ul>
+</div>
+<!-- RestFull Webservices to Fetch/Send Data Done -->
+
+<!--Sample Ionic Mobile Application-->
+<div *ngIf="subTopic=='Sample Ionic Mobile Application'">
+  <h2>Ionic 2 - Pre-requisites and Installation</h2>
+  <p>
+    1. <strong>NPM - </strong>Node Package Manager needs to be available on the developer machine. Download NodeJS installable from <a href="http://nodejs.org" target="_blank">http://nodejs.org</a>
+  </p>
+  <p>
+    2. <strong>Cordova and Ionic – </strong>Install Cordova and Ionic globally on the developer machine using NPM:
+  </p>
+  <blockquote>npm install -g cordova ionic</blockquote>
+  
+  <h2>Getting Started with Ionic</h2>
+  <p>
+    Use the following Ionic CLI command to get started with a new Ionic app.
+  </p>
+  <blockquote>ionic start dinosaur-wiki blank --v2</blockquote>
+  <p><strong><i>--v2</i></strong> indicates generating an Ionic 2 project.</p>
+  <p>
+    The above command should generate a new folder named dinosaur-wiki. CD into this new directory and run following command to see the outcome of a basic scaffolded mobile app.
+  </p>
+  <blockquote>ionic serve</blockquote>
+  <p>
+    Ensure that the node_modules have been installed. If it’s interrupted during the initial step for any reason, run npm install before running ionic serve.
+  </p>
+  <p>
+    It now launches the app on the default browser. Ionic / PhoneGap / Cordova apps run on a browser. A chrome developer tool is a good place to start the browser emulator for mobile. Launch the URL (default is localhost: 8100) in Google Chrome, open developer tools and click on emulator icon to start emulation. Choose your mobile device from the list.
+  </p>
+  <p>
+    You can add ios and android platforms for respective native devices and run the android project in android studio and ios project in Xcode to launch the app in simulator or actual device.
+  </p>
+</div>
+<!-- Sample Ionic Mobile Application Done -->
+

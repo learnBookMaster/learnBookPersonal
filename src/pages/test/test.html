@@ -1,0 +1,50 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Test</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-grid *ngIf="testJson">
+      <ion-row>
+        <ion-col>
+          <h4>Time left: {{displayTime}}{{countDown | async}}</h4>
+        </ion-col>
+      </ion-row>
+      <ion-row class="questionSet">
+        <ion-col col-12 class="question">
+          {{pageIndex+1}}. {{testJson[pageIndex].question}}
+        </ion-col>
+        <ion-col col-12 class="answer"><input type="radio" name="{{pageIndex}}option1" [checked]="testJson[pageIndex].answered=='a'" (change)="onAnswerSelect('a')"> a. {{testJson[pageIndex].options.a}}</ion-col>
+        <ion-col col-12 class="answer"><input type="radio" name="{{pageIndex}}option1" [checked]="testJson[pageIndex].answered=='b'" (change)="onAnswerSelect('b')"> b. {{testJson[pageIndex].options.b}}</ion-col>
+        <ion-col col-12 class="answer"><input type="radio" name="{{pageIndex}}option1" [checked]="testJson[pageIndex].answered=='c'" (change)="onAnswerSelect('c')"> c. {{testJson[pageIndex].options.c}}</ion-col>
+        <ion-col col-12 class="answer"><input type="radio" name="{{pageIndex}}option1" [checked]="testJson[pageIndex].answered=='d'" (change)="onAnswerSelect('d')"> d. {{testJson[pageIndex].options.d}}</ion-col>
+      </ion-row>
+      <!-- previous and next button -->
+        <ion-row>
+          <ion-col col-3>
+            <button ion-button icon-start small (click)="pickQues('prev')" [disabled]="pageIndex==0">
+              <ion-icon name="arrow-back"></ion-icon>
+              Previous
+            </button>
+          </ion-col>
+          <ion-col col-1></ion-col>
+          <ion-col col-5>
+            <button ion-button icon-start small (click)="submitTest()">
+              <ion-icon name="paper"></ion-icon>
+              Submit Test
+            </button>
+          </ion-col>
+          <ion-col col-3>
+            <button ion-button icon-end small (click)="pickQues('next')" [disabled]="pageIndex==testJson.length-1">
+              Next
+              <ion-icon name="arrow-forward"></ion-icon>
+            </button>
+          </ion-col>
+        </ion-row>
+      <!-- previous and next button Done-->
+    </ion-grid>
+</ion-content>

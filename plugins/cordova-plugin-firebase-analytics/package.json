@@ -1,0 +1,101 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "cordova-plugin-firebase-analytics",
+        "scope": null,
+        "escapedName": "cordova-plugin-firebase-analytics",
+        "name": "cordova-plugin-firebase-analytics",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "C:\\Users\\vipul\\Desktop\\Exploration\\IITTech\\IITTechFestCG"
+    ]
+  ],
+  "_from": "cordova-plugin-firebase-analytics@latest",
+  "_id": "cordova-plugin-firebase-analytics@0.12.1",
+  "_inCache": true,
+  "_location": "/cordova-plugin-firebase-analytics",
+  "_nodeVersion": "4.5.0",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/cordova-plugin-firebase-analytics-0.12.1.tgz_1510856417978_0.6630272311158478"
+  },
+  "_npmUser": {
+    "name": "chemerisuk",
+    "email": "chemerisuk@gmail.com"
+  },
+  "_npmVersion": "2.15.9",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "cordova-plugin-firebase-analytics",
+    "scope": null,
+    "escapedName": "cordova-plugin-firebase-analytics",
+    "name": "cordova-plugin-firebase-analytics",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-firebase-analytics/-/cordova-plugin-firebase-analytics-0.12.1.tgz",
+  "_shasum": "3e308bccaf8bc8778aa791a6ebda9967723dc4e4",
+  "_shrinkwrap": null,
+  "_spec": "cordova-plugin-firebase-analytics",
+  "_where": "C:\\Users\\vipul\\Desktop\\Exploration\\IITTech\\IITTechFestCG",
+  "author": {
+    "name": "Maksim Chemerisuk",
+    "email": "chemerisuk@gmail.com",
+    "url": "https://github.com/chemerisuk"
+  },
+  "bugs": {
+    "url": "https://github.com/chemerisuk/cordova-plugin-firebase-analytics/issues"
+  },
+  "cordova": {
+    "id": "cordova-plugin-firebase-analytics",
+    "platforms": [
+      "ios",
+      "android"
+    ]
+  },
+  "dependencies": {},
+  "description": "Cordova plugin for Firebase Analytics",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "3e308bccaf8bc8778aa791a6ebda9967723dc4e4",
+    "tarball": "https://registry.npmjs.org/cordova-plugin-firebase-analytics/-/cordova-plugin-firebase-analytics-0.12.1.tgz"
+  },
+  "gitHead": "2b6d1f66152020c4830cac7520479c3b54e61eb8",
+  "homepage": "https://github.com/chemerisuk/cordova-plugin-firebase-analytics#readme",
+  "keywords": [
+    "cordova",
+    "firebase",
+    "analytics",
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios"
+  ],
+  "license": "MIT",
+  "maintainers": [
+    {
+      "name": "chemerisuk",
+      "email": "chemerisuk@gmail.com"
+    }
+  ],
+  "name": "cordova-plugin-firebase-analytics",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chemerisuk/cordova-plugin-firebase-analytics.git"
+  },
+  "scripts": {
+    "postversion": "git push && git push --tags",
+    "version": "replace -s 'version=\"(.+)(?=\">)' 'version=\"'$npm_package_version plugin.xml && git add plugin.xml"
+  },
+  "version": "0.12.1"
+}

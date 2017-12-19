@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "150488178728",
+    "firebase_url": "https://iittechfestcglearnbook-f73d6.firebaseio.com",
+    "project_id": "iittechfestcglearnbook-f73d6",
+    "storage_bucket": "iittechfestcglearnbook-f73d6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:150488178728:android:3466a306b3dd65e2",
+        "android_client_info": {
+          "package_name": "com.capgemini.iit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "150488178728-3il5vke8kf7budakrn5v874rt9aehm5l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBEN4ZNwGWeoLss53nVFO7vQ9Q8GDugWxc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

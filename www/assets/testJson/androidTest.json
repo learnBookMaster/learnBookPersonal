@@ -1,0 +1,111 @@
+[{
+    "question": "Which is the base layer in the Android Architecture?",
+    "options": {
+      "a": "Libraries",
+      "b": "Android Runtime",
+      "c": "Application Framework",
+      "d": "Linux Kernel"
+    },
+  "answer": "d",
+  "answered":""
+  },
+  {
+    "question": "What is the key component of android runtime?",
+    "options": {
+      "a": "Dalvik Virtual Machine",
+      "b": "Android Runtime Machine",
+      "c": "Dalvik Realtime Machine",
+      "d": "Linux Kernel"
+    },
+    "answer": "a",
+    "answered":""
+  },
+  {
+    "question": "Android system initiates its program with an activity starting with a call on which callback method?",
+    "options": {
+      "a": "onStart()",
+      "b": "onRun()",
+      "c": "onCreate()",
+      "d": "onLaunch()"
+    },
+    "answer": "c",
+    "answered":""
+  },
+  {
+    "question": "Which are the 2 states a service takes?",
+    "options": {
+      "a": "On and Off",
+      "b": "Started and Bound",
+      "c": "Live and Bound",
+      "d": "Run and Stop"
+    },
+    "answer": "b",
+    "answered":""
+  },
+  {
+    "question": "Which method is called when the service is no longer used and is being destroyed?",
+    "options": {
+      "a": "onStop()",
+      "b": "onKill()",
+      "c": "onDestroy()",
+      "d": "onUnbind()"
+    },
+    "answer": "c",
+    "answered":""
+  },
+  {
+    "question": "What can you implement to monitor changes in the service’s state?",
+    "options": {
+      "a": "State Monitor Callbacks",
+      "b": "Watch Callbacks",
+      "c": "Service Monitor Callbacks",
+      "d": "Life Cycle Callbacks"
+    },
+    "answer": "d",
+    "answered":""
+  },
+  {
+    "question": "Broadcast receivers are sometimes called?",
+    "options": {
+      "a": "Communication Intents",
+      "b": "Events or Intents",
+      "c": "Send or Receive Events",
+      "d": "Intents or Filters"
+    },
+    "answer": "b",
+    "answered":""
+  },
+  {
+    "question": "Broadcast receiver is implemented by overriding which method?",
+    "options": {
+      "a": "onReceive()",
+      "b": "onGot()",
+      "c": "onBroadcase()",
+      "d": "onListen()"
+    },
+    "answer": "a",
+    "answered":""
+  },
+  {
+    "question": "An application listens for specific broadcast intents by registering a broadcast receiver in which file?",
+    "options": {
+      "a": "AndroidConfig.xml",
+      "b": "AndroidSettings.xml",
+      "c": "AndroidManifest.xml",
+      "d": "MainActivity.xml"
+    },
+    "answer": "c",
+    "answered":""
+  },
+  {
+    "question": "Which intent does your activity needs to send to open a url in web browser?",
+    "options": {
+      "a": "ACTION_SEND_BROWSER",
+      "b": "ACTION_WEB_SEARCH",
+      "c": "ACTION_PUT_WEB",
+      "d": "ACTION_OPEN_URL"
+    },
+    "answer": "b",
+    "answered":""
+  }
+]

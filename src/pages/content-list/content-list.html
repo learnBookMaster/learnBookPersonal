@@ -1,0 +1,91 @@
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle icon-only>
+      <ion-icon name='menu'></ion-icon>
+    </button>
+    <ion-title>{{ subTopic }}</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only small (click)="goHome()">
+        <ion-icon name='home'></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-menu id="subTopic" [content]="content" type="overlay">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Table Of Content</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <button ion-item *ngFor="let subTopic of subTopics[topic]" (click)="subTopicSelected(subTopic)">
+        {{ subTopic }}
+      </button>
+      <button ion-item (click)="goHome()">
+        Home
+      </button>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+<ion-nav #content [root]="rootPage"></ion-nav>
+
+<ion-content padding>
+  <!-- previous and next button -->
+  <ion-grid>
+    <ion-row>
+      <ion-col col-3>
+        <button ion-button icon-start small (click)="changeSubTopic('prev')" [disabled]="currentIndex==0">
+          <ion-icon name="arrow-back"></ion-icon>
+          Previous
+        </button>
+      </ion-col>
+      <ion-col col-3>
+
+      </ion-col>
+      <ion-col col-3>
+
+      </ion-col>
+      <ion-col col-3>
+        <button ion-button icon-end small (click)="changeSubTopic('next')" [disabled]="currentIndex==subTopicArrayLength-1">
+          Next
+          <ion-icon name="arrow-forward"></ion-icon>
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <!-- previous and next button Done-->
+
+    <page-android-course-material [subTopic] = "subTopic" *ngIf="topic=='Android'"></page-android-course-material>
+    <page-cordova-course-material [subTopic] = "subTopic" *ngIf="topic=='Cordova'"></page-cordova-course-material>
+
+  <!-- previous and next button -->
+    <ion-grid>
+      <ion-row>
+        <ion-col col-3>
+          <button ion-button icon-start small (click)="changeSubTopic('prev')" [disabled]="currentIndex==0">
+            <ion-icon name="arrow-back"></ion-icon>
+            Previous
+          </button>
+        </ion-col>
+        <ion-col col-1></ion-col>
+        <ion-col col-5>
+              <button ion-button icon-start small (click)="startTest()" [disabled]="topicCovered.length<subTopicArrayLength">
+                <ion-icon name="paper"></ion-icon>
+                Start Test
+              </button>
+         </ion-col>
+        <ion-col col-3>
+          <button ion-button icon-end small (click)="changeSubTopic('next')" [disabled]="currentIndex==subTopicArrayLength-1">
+            Next
+            <ion-icon name="arrow-forward"></ion-icon>
+          </button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  <!-- previous and next button Done-->
+
+</ion-content>
