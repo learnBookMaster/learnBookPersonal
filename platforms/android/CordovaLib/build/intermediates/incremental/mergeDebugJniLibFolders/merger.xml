@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="C:\Users\vipul\Desktop\Exploration\IITTech\IITTechFestCG\platforms\android\CordovaLib\src\main\jniLibs"/></dataSet><dataSet config="debug"><source path="C:\Users\vipul\Desktop\Exploration\IITTech\IITTechFestCG\platforms\android\CordovaLib\src\debug\jniLibs"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="D:\test\New folder (2)\IITTechFestCG\platforms\android\CordovaLib\src\main\jniLibs"/></dataSet><dataSet config="debug"><source path="D:\test\New folder (2)\IITTechFestCG\platforms\android\CordovaLib\src\debug\jniLibs"/></dataSet></merger>

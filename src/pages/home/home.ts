@@ -18,6 +18,7 @@ export class HomePage {
 
     markPercent: string;
     topic: string;
+    timeSpent: string;
     topics: {title: String, para1: String, desc: String, iconUrl: String, timeSpent: String, marksObtained: String}[] = this.topicsService.getTopics();
 
   constructor(public navCtrl: NavController,
@@ -67,6 +68,10 @@ export class HomePage {
        this.markPercent = this.navParams.get('markPercent');
          this.topicsService.setPercentage(this.markPercent,this.topic);
        }
+       if(this.navParams.get('timeSpent')){
+          this.timeSpent = this.navParams.get('timeSpent');
+            this.topicsService.setTimeSpent(this.timeSpent,this.topic);
+          }
    }
 
    startCourse(topic: String){

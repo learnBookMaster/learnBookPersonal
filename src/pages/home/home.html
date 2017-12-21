@@ -1,49 +1,49 @@
 <ion-header>
-  <ion-navbar>
-    <button ion-button menuToggle icon-only>
-      <ion-icon name='menu'></ion-icon>
-    </button>
-    <ion-title>
-      Learn Book
-    </ion-title>
-    <ion-buttons end>
-      <button ion-button icon-only small (click)="logout()">
-        <ion-icon name='log-out'></ion-icon>
-      </button>
-    </ion-buttons>
-  </ion-navbar>
+    <ion-navbar>
+        <button ion-button menuToggle icon-only>
+            <ion-icon name='menu'></ion-icon>
+        </button>
+        <ion-title>
+            Learn Book
+        </ion-title>
+        <ion-buttons end>
+            <button ion-button icon-only small (click)="logout()">
+                <ion-icon name='log-out'></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
 </ion-header>
 <ion-content padding>
-  <ion-card *ngFor="let topic of topics">
+    <ion-card *ngFor="let topic of topics">
 
-    <ion-item>
-      <h2>{{topic.title}}</h2>
-      <p>{{topic.para1}}</p>
-    </ion-item>
+        <ion-item>
+            <h2>{{topic.title}}</h2>
+            <p>{{topic.para1}}</p>
+        </ion-item>
 
-    <img src="{{topic.iconUrl}}">
+        <img src="{{topic.iconUrl}}">
 
-    <ion-card-content>
-      <p>{{topic.desc}}</p>
-    </ion-card-content>
+        <ion-card-content>
+            <p>{{topic.desc}}</p>
+        </ion-card-content>
 
-    <ion-row>
-      <ion-col>
-        <button ion-button (click)="startCourse(topic.title)">
-          Start
-        </button>
-      </ion-col>
-      <ion-col>
-        <button ion-button icon-left clear>
-          <ion-icon name="happy"></ion-icon>
-          <div>{{topic.marksObtained}}</div>
-        </button>
-      </ion-col>
-      <ion-col center text-center>
-        <ion-note>
-          <h3>{{topic.timeSpent}}</h3>
-        </ion-note>
-      </ion-col>
-    </ion-row>
-  </ion-card>
+        <ion-row>
+            <ion-col>
+                <button ion-button (click)="startCourse(topic.title)">
+                    Start
+                </button>
+            </ion-col>
+            <ion-col>
+                <button ion-button icon-left clear>
+                    <ion-icon name="happy"></ion-icon>
+                    <div>{{topic.marksObtained}}</div>
+                </button>
+            </ion-col>
+            <ion-col center text-center>
+                <ion-note>
+                    <h3>{{topic.timeSpent}}</h3>
+                </ion-note>
+            </ion-col>
+        </ion-row>
+    </ion-card>
 </ion-content>

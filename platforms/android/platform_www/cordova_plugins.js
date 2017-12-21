@@ -1,28 +1,11 @@
 cordova.define('cordova/plugin_list', function(require, exports, module) {
 module.exports = [
   {
-    "id": "ionic-plugin-keyboard.keyboard",
-    "file": "plugins/ionic-plugin-keyboard/www/android/keyboard.js",
-    "pluginId": "ionic-plugin-keyboard",
+    "id": "cordova-plugin-browsertab.BrowserTab",
+    "file": "plugins/cordova-plugin-browsertab/www/browsertab.js",
+    "pluginId": "cordova-plugin-browsertab",
     "clobbers": [
-      "cordova.plugins.Keyboard"
-    ],
-    "runs": true
-  },
-  {
-    "id": "cordova-plugin-device.device",
-    "file": "plugins/cordova-plugin-device/www/device.js",
-    "pluginId": "cordova-plugin-device",
-    "clobbers": [
-      "device"
-    ]
-  },
-  {
-    "id": "cordova-plugin-splashscreen.SplashScreen",
-    "file": "plugins/cordova-plugin-splashscreen/www/splashscreen.js",
-    "pluginId": "cordova-plugin-splashscreen",
-    "clobbers": [
-      "navigator.splashscreen"
+      "cordova.plugins.browsertab"
     ]
   },
   {
@@ -34,19 +17,27 @@ module.exports = [
     ]
   },
   {
-    "id": "cordova-universal-links-plugin.universalLinks",
-    "file": "plugins/cordova-universal-links-plugin/www/universal_links.js",
-    "pluginId": "cordova-universal-links-plugin",
+    "id": "cordova-plugin-customurlscheme.LaunchMyApp",
+    "file": "plugins/cordova-plugin-customurlscheme/www/android/LaunchMyApp.js",
+    "pluginId": "cordova-plugin-customurlscheme",
     "clobbers": [
-      "universalLinks"
+      "window.plugins.launchmyapp"
     ]
   },
   {
-    "id": "cordova-plugin-browsertab.BrowserTab",
-    "file": "plugins/cordova-plugin-browsertab/www/browsertab.js",
-    "pluginId": "cordova-plugin-browsertab",
+    "id": "cordova-plugin-device.device",
+    "file": "plugins/cordova-plugin-device/www/device.js",
+    "pluginId": "cordova-plugin-device",
     "clobbers": [
-      "cordova.plugins.browsertab"
+      "device"
+    ]
+  },
+  {
+    "id": "cordova-plugin-firebase-analytics.FirebaseAnalytics",
+    "file": "plugins/cordova-plugin-firebase-analytics/www/FirebaseAnalytics.js",
+    "pluginId": "cordova-plugin-firebase-analytics",
+    "merges": [
+      "cordova.plugins.firebase.analytics"
     ]
   },
   {
@@ -59,11 +50,11 @@ module.exports = [
     ]
   },
   {
-    "id": "cordova-plugin-customurlscheme.LaunchMyApp",
-    "file": "plugins/cordova-plugin-customurlscheme/www/android/LaunchMyApp.js",
-    "pluginId": "cordova-plugin-customurlscheme",
+    "id": "cordova-plugin-splashscreen.SplashScreen",
+    "file": "plugins/cordova-plugin-splashscreen/www/splashscreen.js",
+    "pluginId": "cordova-plugin-splashscreen",
     "clobbers": [
-      "window.plugins.launchmyapp"
+      "navigator.splashscreen"
     ]
   },
   {
@@ -75,31 +66,40 @@ module.exports = [
     ]
   },
   {
-    "id": "cordova-plugin-firebase-analytics.FirebaseAnalytics",
-    "file": "plugins/cordova-plugin-firebase-analytics/www/FirebaseAnalytics.js",
-    "pluginId": "cordova-plugin-firebase-analytics",
-    "merges": [
-      "cordova.plugins.firebase.analytics"
+    "id": "cordova-universal-links-plugin.universalLinks",
+    "file": "plugins/cordova-universal-links-plugin/www/universal_links.js",
+    "pluginId": "cordova-universal-links-plugin",
+    "clobbers": [
+      "universalLinks"
     ]
+  },
+  {
+    "id": "ionic-plugin-keyboard.keyboard",
+    "file": "plugins/ionic-plugin-keyboard/www/android/keyboard.js",
+    "pluginId": "ionic-plugin-keyboard",
+    "clobbers": [
+      "cordova.plugins.Keyboard"
+    ],
+    "runs": true
   }
 ];
 module.exports.metadata = 
 // TOP OF METADATA
 {
-  "ionic-plugin-keyboard": "2.2.1",
-  "cordova-plugin-whitelist": "1.3.3",
-  "cordova-plugin-device": "1.1.7",
-  "cordova-plugin-splashscreen": "4.1.0",
-  "cordova-plugin-ionic-webview": "1.1.16",
-  "cordova-plugin-buildinfo": "1.1.0",
-  "cordova-universal-links-plugin": "1.2.1",
   "cordova-plugin-browsertab": "0.2.0",
-  "cordova-plugin-inappbrowser": "1.7.2",
-  "cordova-plugin-customurlscheme": "4.3.0",
+  "cordova-plugin-buildinfo": "1.1.0",
   "cordova-plugin-console": "1.1.0",
-  "cordova-plugin-statusbar": "2.3.0",
+  "cordova-plugin-customurlscheme": "4.3.0",
+  "cordova-plugin-device": "1.1.7",
   "cordova-support-google-services": "1.0.0",
-  "cordova-plugin-firebase-analytics": "0.12.1"
+  "cordova-plugin-firebase-analytics": "0.12.1",
+  "cordova-plugin-inappbrowser": "1.7.2",
+  "cordova-plugin-ionic-webview": "1.1.16",
+  "cordova-plugin-splashscreen": "4.1.0",
+  "cordova-plugin-statusbar": "2.3.0",
+  "cordova-plugin-whitelist": "1.3.3",
+  "cordova-universal-links-plugin": "1.2.1",
+  "ionic-plugin-keyboard": "2.2.1"
 };
 // BOTTOM OF METADATA
 });

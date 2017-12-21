@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import * as firebase from 'firebase';
 import { FirebaseAnalytics } from '@ionic-native/firebase-analytics';
 
 import { TestService } from '../../services/test.service';
@@ -28,6 +27,7 @@ export class TestPage {
   counter: number = 10*60;
   displayTime: string;
   countDown;
+  disableSubmitTest: boolean = true;
 
   constructor(public navCtrl: NavController,
   public navParams: NavParams,
@@ -74,11 +74,15 @@ export class TestPage {
 
   onAnswerSelect(selectedAns: string){
     this.testJson[this.pageIndex].answered = selectedAns;
+    if(this.pageIndex==this.testJson.length-1){
+        this.disableSubmitTest = false;
+    }
   }
 
   submitTest(){
     let result: number = 0;
     let resultPercent: any = 0;
+    let timespent: string = "0 min";
     for(let test of this.testJson) {
       if(test.answered==test.answer){
         result=result+1;
@@ -109,9 +113,11 @@ export class TestPage {
        console.log("Hour - " +hour);
        console.log("Days - " +days);
 
-       this.firebaseAnalytics.logEvent("androidTest", { Topic:'Android Test' ,Name: "Test_User",Score_Obtained: resultPercent, Passing_Score: '40', Result: resultText, Test1_Actual_time: minutes+' min',Test1_Planned_time: '30 min'})
-            .then((res: any) => console.log(res))
-            .catch((error: any) => console.error(error));
+
+       this.firebaseAnalytics.logEvent("Android_Test_Complete", { Score_Obtained:  resultPercent, Passing_Score: '40', Result:  resultText, _Actual_test_time: minutes+' min',Planned_test_time: '30 min'})   
+       .then((res: any) => console.log(res))
+       .catch((error: any) => console.error(error));
+        timespent =   minutes+' min';
 
      /*done firebase analysis*/
 
@@ -133,15 +139,17 @@ export class TestPage {
              console.log("Hour - " +hour);
              console.log("Days - " +days);
 
-             this.firebaseAnalytics.logEvent("cordovaTest", { Topic:'Cordova Test' ,Name: "Test_User",Score_Obtained: resultPercent, Passing_Score: '40', Result: resultText, Test1_Actual_time: minutes+' min',Test1_Planned_time: '30 min'})
-                  .then((res: any) => console.log(res))
-                  .catch((error: any) => console.error(error));
+                            
+             this.firebaseAnalytics.logEvent("Hybrid_Test_Complete", { Score_Obtained:  resultPercent, Passing_Score: '40', Result:  resultText, Actual_test_time: minutes+' min',Planned_test_ime: '30 min'})
+            .then((res: any) => console.log(res))
+             .catch((error: any) => console.error(error));
 
+              timespent =   minutes+' min';
            /*done firebase analysis*/
      }
 
 
-    this.navCtrl.setRoot(ResultPage,{result: resultPercent, topic: this.topic});
+    this.navCtrl.setRoot(ResultPage,{result: resultPercent, topic: this.topic, timeSpent: timespent});
   }
 
 }

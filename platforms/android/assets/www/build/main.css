@@ -24721,3 +24721,28 @@ ion-navbar.toolbar {
     padding-top: calc(16px + 20px);
   }
 }
+
+page-result .successCheck {
+  color: green;
+}
+
+page-result .errorCheck {
+  color: red;
+}
+
+page-result .successCheck, page-result .errorCheck {
+  font-size: 70px;
+}
+
+page-result ion-row {
+  text-align: center;
+  font-size: 30px;
+}
+
+page-test .answer {
+  background-color: beige;
+}
+
+page-test .questionSet {
+  height: 200px;
+}

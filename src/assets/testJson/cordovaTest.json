@@ -1,120 +1,120 @@
 [{
-  "question": "Which is the base layer in the Android Architecture?",
+  "question": "Hybrid Mobile App Development enables developers to target more than one platform?",
   "options": {
-    "a": "Libraries",
-    "b": "Android Runtime",
-    "c": "Application Framework",
-    "d": "Linux Kernel"
+    "a": "True",
+    "b": "False",
+    "c": "",
+    "d": ""
   },
-  "answer": "d",
+  "answer": "a",
   "isAnswered":"false",
   "answered":""
 },
   {
-    "question": "What is the key component of android runtime?",
+    "question": "Hybrid Mobile App Development is achieved using which technologies?",
     "options": {
-      "a": "Dalvik Virtual Machine",
-      "b": "Android Runtime Machine",
-      "c": "Dalvik Realtime Machine",
-      "d": "Linux Kernel"
+      "a": "XCODE, SWIFT",
+      "b": "C++, Python",
+      "c": "HTML5, CSS3, Angular, Cordova, Ionic",
+      "d": "Java"
+    },
+    "answer": "c",
+    "isAnswered":"false",
+    "answered":""
+  },
+  {
+    "question": "What makes you hybrid app work like native app and access the hardware part?",
+    "options": {
+      "a": "Webview",
+      "b": "Cordova API’s",
+      "c": "Front-end",
+      "d": "Hardware"
+    },
+    "answer": "b",
+    "isAnswered":"false",
+    "answered":""
+  },
+  {
+    "question": "What makes you hybrid app work like native app and access the hardware part?",
+    "options": {
+      "a": "Webview",
+      "b": "Cordova API’s",
+      "c": "Front-end",
+      "d": "Hardware"
+    },
+    "answer": "b",
+    "isAnswered":"false",
+    "answered":""
+  },
+  {
+    "question": "Which method provides a read only access to a resource?",
+    "options": {
+      "a": "PUT",
+      "b": "SEND",
+      "c": "GET",
+      "d": "DELETE"
+    },
+    "answer": "c",
+    "isAnswered":"false",
+    "answered":""
+  },
+  {
+    "question": "API for accessing Camera feature of a device is a custom plugin?",
+    "options": {
+      "a": "True",
+      "b": "False",
+      "c": "",
+      "d": ""
+    },
+    "answer": "b",
+    "isAnswered":"false",
+    "answered":""
+  },
+  {
+    "question": "Which method provides a modify access to a resource?",
+    "options": {
+      "a": "PUT",
+      "b": "SEND",
+      "c": "GET",
+      "d": "DELETE"
     },
     "answer": "a",
     "isAnswered":"false",
     "answered":""
   },
   {
-    "question": "Android system initiates its program with an activity starting with a call on which callback method?",
+    "question": "Predefined plugins can be added by the following command in Cordova?",
     "options": {
-      "a": "onStart()",
-      "b": "onRun()",
-      "c": "onCreate()",
-      "d": "onLaunch()"
-    },
-    "answer": "c",
-    "isAnswered":"false",
-    "answered":""
-  },
-  {
-    "question": "Which are the 2 states a service takes?",
-    "options": {
-      "a": "On and Off",
-      "b": "Started and Bound",
-      "c": "Live and Bound",
-      "d": "Run and Stop"
-    },
-    "answer": "b",
-    "isAnswered":"false",
-    "answered":""
-  },
-  {
-    "question": "Which method is called when the service is no longer used and is being destroyed?",
-    "options": {
-      "a": "onStop()",
-      "b": "onKill()",
-      "c": "onDestroy()",
-      "d": "onUnbind()"
-    },
-    "answer": "c",
-    "isAnswered":"false",
-    "answered":""
-  },
-  {
-    "question": "What can you implement to monitor changes in the service’s state?",
-    "options": {
-      "a": "State Monitor Callbacks",
-      "b": "Watch Callbacks",
-      "c": "Service Monitor Callbacks",
-      "d": "Life Cycle Callbacks"
-    },
-    "answer": "d",
-    "isAnswered":"false",
-    "answered":""
-  },
-  {
-    "question": "Broadcast receivers are sometimes called?",
-    "options": {
-      "a": "Communication Intents",
-      "b": "Events or Intents",
-      "c": "Send or Receive Events",
-      "d": "Intents or Filters"
-    },
-    "answer": "b",
-    "isAnswered":"false",
-    "answered":""
-  },
-  {
-    "question": "Broadcast receiver is implemented by overriding which method?",
-    "options": {
-      "a": "onReceive()",
-      "b": "onGot()",
-      "c": "onBroadcase()",
-      "d": "onListen()"
+      "a": "cordova plugin add <plugin name>",
+      "b": "add plugin <plugin name>",
+      "c": "add cordova plugin <plugin name>",
+      "d": "create add plugin <plugin name>"
     },
     "answer": "a",
     "isAnswered":"false",
     "answered":""
   },
   {
-    "question": "An application listens for specific broadcast intents by registering a broadcast receiver in which file?",
+    "question": "Xamarin is a hybrid mobile app development tool?",
     "options": {
-      "a": "AndroidConfig.xml",
-      "b": "AndroidSettings.xml",
-      "c": "AndroidManifest.xml",
-      "d": "MainActivity.xml"
+      "a": "False",
+      "b": "True",
+      "c": "",
+      "d": ""
     },
-    "answer": "c",
+    "answer": "b",
     "isAnswered":"false",
     "answered":""
   },
   {
-    "question": "Which intent does your activity needs to send to open a url in web browser?",
+    "question": "What comprises of webpart in hybrid mobile development?",
     "options": {
-      "a": "ACTION_SEND_BROWSER",
-      "b": "ACTION_WEB_SEARCH",
-      "c": "ACTION_PUT_WEB",
-      "d": "ACTION_OPEN_URL"
+      "a": "Plugins",
+      "b": "RESTful API",
+      "c": "HTML5, CSS3, Bootstrap",
+      "d": "Frameworks"
     },
-    "answer": "b",
+    "answer": "c",
     "isAnswered":"false",
     "answered":""
   }

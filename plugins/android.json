@@ -8,47 +8,47 @@
   },
   "installed_plugins": {
     "cordova-plugin-browsertab": {
-      "PACKAGE_NAME": "io.ionic.starter"
+      "PACKAGE_NAME": "com.capgemini.iit"
     },
     "cordova-plugin-buildinfo": {
-      "PACKAGE_NAME": "io.ionic.starter"
+      "PACKAGE_NAME": "com.capgemini.iit"
     },
     "cordova-plugin-console": {
-      "PACKAGE_NAME": "io.ionic.starter"
+      "PACKAGE_NAME": "com.capgemini.iit"
     },
     "cordova-plugin-customurlscheme": {
       "URL_SCHEME": "io.ionic.firebaseui",
       "ANDROID_SCHEME": " ",
       "ANDROID_HOST": " ",
       "ANDROID_PATHPREFIX": "/",
-      "PACKAGE_NAME": "io.ionic.starter"
+      "PACKAGE_NAME": "com.capgemini.iit"
     },
     "cordova-plugin-device": {
-      "PACKAGE_NAME": "io.ionic.starter"
-    },
-    "cordova-plugin-inappbrowser": {
-      "PACKAGE_NAME": "io.ionic.starter"
-    },
-    "cordova-plugin-ionic-webview": {
-      "PACKAGE_NAME": "io.ionic.starter"
-    },
-    "cordova-plugin-splashscreen": {
-      "PACKAGE_NAME": "io.ionic.starter"
-    },
-    "cordova-plugin-statusbar": {
-      "PACKAGE_NAME": "io.ionic.starter"
-    },
-    "cordova-plugin-whitelist": {
-      "PACKAGE_NAME": "io.ionic.starter"
-    },
-    "cordova-universal-links-plugin": {
-      "PACKAGE_NAME": "io.ionic.starter"
-    },
-    "ionic-plugin-keyboard": {
-      "PACKAGE_NAME": "io.ionic.starter"
+      "PACKAGE_NAME": "com.capgemini.iit"
     },
     "cordova-plugin-firebase-analytics": {
       "FIREBASE_VERSION": "11.0.+",
+      "PACKAGE_NAME": "com.capgemini.iit"
+    },
+    "cordova-plugin-inappbrowser": {
+      "PACKAGE_NAME": "com.capgemini.iit"
+    },
+    "cordova-plugin-ionic-webview": {
+      "PACKAGE_NAME": "com.capgemini.iit"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "com.capgemini.iit"
+    },
+    "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "com.capgemini.iit"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.capgemini.iit"
+    },
+    "cordova-universal-links-plugin": {
+      "PACKAGE_NAME": "com.capgemini.iit"
+    },
+    "ionic-plugin-keyboard": {
       "PACKAGE_NAME": "com.capgemini.iit"
     }
   },

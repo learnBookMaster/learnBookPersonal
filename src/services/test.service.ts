@@ -10,8 +10,8 @@ export class TestService{
 
 constructor (private http: Http) {}
 
-private Android = '/assets/testJson/androidTest.json';
-private Cordova = '/assets/testJson/cordovaTest.json';
+private Android = 'assets/testJson/androidTest.json';
+private Cordova = 'assets/testJson/cordovaTest.json';
 
 getTest(testType): Observable<[{}]>{
 

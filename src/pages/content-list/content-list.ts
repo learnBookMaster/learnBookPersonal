@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, MenuController } from 'ionic-angular';
-import * as firebase from 'firebase';
 import { FirebaseAnalytics } from '@ionic-native/firebase-analytics';
 
 import { HomePage } from '../home/home';
@@ -83,7 +82,65 @@ export class ContentListPage {
   }
 
   goHome(){
-    this.navCtrl.setRoot(HomePage);
+    var minutes;
+    if(this.topic == 'Android'){
+
+          /*firbase analysis code*/
+
+            let stopTime:any = new Date();
+            var startTime = this.courseTimeCalcServiceAndroid.getStartTime();
+            var diff = Math.abs(startTime - stopTime);
+            var seconds = Math.floor((diff/1000));
+            minutes = Math.floor((diff/1000)/60);
+            var hour = minutes/60;
+            var days = Math.round(minutes/1440);
+
+
+            console.log("Course completed in :");
+            console.log("Seconds - " +seconds);
+            console.log("Minutes - " +minutes);
+            console.log("Hour - " +hour);
+            console.log("Days - " +days);
+
+            this.firebaseAnalytics.logEvent("Android_Course_Complete", { Actual_Time: minutes+' min', Planned_time: '30 min'})
+                .then((res: any) => console.log(res))
+                .catch((error: any) => console.error(error));
+
+
+          /*done firebase analysis*/
+
+         }else{
+         /*firbase analysis code*/
+
+                 let stopTime:any = new Date();
+                 var startTime = this.courseTimeCalcServiceCordova.getStartTime();
+                 var diff = Math.abs(startTime - stopTime);
+                 var seconds = Math.floor((diff/1000));
+                 minutes = Math.floor((diff/1000)/60);
+                 var hour = minutes/60;
+                 var days = Math.round(minutes/1440);
+
+
+                 console.log("Course completed in :");
+                 console.log("Seconds - " +seconds);
+                 console.log("Minutes - " +minutes);
+                 console.log("Hour - " +hour);
+                 console.log("Days - " +days);
+
+                 this.firebaseAnalytics.logEvent("Cordova_Course_Complete", { Actual_Time: minutes+' min', Planned_time: '30 min'})
+                           .then((res: any) => console.log(res))
+                           .catch((error: any) => console.error(error));
+
+
+               /*done firebase analysis*/
+
+
+
+  }
+  this.navCtrl.setRoot(HomePage,{
+          timeSpent: minutes+' min',
+          topic: this.topic
+      });
   }
 
   startTest(){
@@ -106,8 +163,8 @@ export class ContentListPage {
         console.log("Hour - " +hour);
         console.log("Days - " +days);
 
-        this.firebaseAnalytics.logEvent("androidCourse", { Topic:'Android Course' ,Name: "Test_User",Actual_Time: minutes+' min', Planned_time: '30 min'})
-          .then((res: any) => console.log(res))
+          this.firebaseAnalytics.logEvent("Android_Course_Complete", { Actual_Time: minutes+' min', Planned_time: '30 min'})
+            .then((res: any) => console.log(res))
             .catch((error: any) => console.error(error));
 
       /*done firebase analysis*/
@@ -131,9 +188,9 @@ export class ContentListPage {
              console.log("Hour - " +hour);
              console.log("Days - " +days);
 
-             this.firebaseAnalytics.logEvent("cordovaCourse", { Topic:'Cordova Course' ,Name: "Test_User", Actual_Time: minutes+' min', Planned_time: '30 min'})
-                  .then((res: any) => console.log(res))
-                  .catch((error: any) => console.error(error));
+             this.firebaseAnalytics.logEvent("Cordova_Course_Complete", { Actual_Time: minutes+' min', Planned_time: '30 min'})
+                                  .then((res: any) => console.log(res))
+                                  .catch((error: any) => console.error(error));
 
            /*done firebase analysis*/
 
