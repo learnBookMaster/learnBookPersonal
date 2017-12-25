@@ -4,7 +4,7 @@
     <button ion-button menuToggle icon-only>
       <ion-icon name='menu'></ion-icon>
     </button>
-    <ion-title>{{ subTopic }}</ion-title>
+    <ion-title>{{ topic }}</ion-title>
     <ion-buttons end>
       <button ion-button icon-only small (click)="goHome()">
         <ion-icon name='home'></ion-icon>
@@ -34,34 +34,11 @@
 <ion-nav #content [root]="rootPage"></ion-nav>
 
 <ion-content padding>
-  <!-- previous and next button -->
-  <ion-grid>
-    <ion-row>
-      <ion-col col-3>
-        <button ion-button icon-start small (click)="changeSubTopic('prev')" [disabled]="currentIndex==0">
-          <ion-icon name="arrow-back"></ion-icon>
-          Previous
-        </button>
-      </ion-col>
-      <ion-col col-3>
-
-      </ion-col>
-      <ion-col col-3>
-
-      </ion-col>
-      <ion-col col-3>
-        <button ion-button icon-end small (click)="changeSubTopic('next')" [disabled]="currentIndex==subTopicArrayLength-1">
-          Next
-          <ion-icon name="arrow-forward"></ion-icon>
-        </button>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
-  <!-- previous and next button Done-->
-
+    <div (swipe)="swipeEvent($event)">
+    <h3>{{subTopic}}</h3>
     <page-android-course-material [subTopic] = "subTopic" *ngIf="topic=='Android'"></page-android-course-material>
     <page-cordova-course-material [subTopic] = "subTopic" *ngIf="topic=='Cordova'"></page-cordova-course-material>
-
+    </div>
   <!-- previous and next button -->
     <ion-grid>
       <ion-row>

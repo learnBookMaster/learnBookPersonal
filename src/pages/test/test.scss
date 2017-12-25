@@ -1,8 +1,27 @@
 page-test {
 .answer{
-  background-color: beige;
+      background-color: #00bde8;
+      margin-top: 13px;
+      color: #fff;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      border-radius: 0px 10px 10px 0px;
 }
 .questionSet{
   height:200px;
+  margin-bottom: 80px;
+}
+.toolbar-title,.scroll-content{
+    font-family: UbuntuRegular;
+}
+.scroll-content{
+    background-color: #ececec;
+        background-image: url(../assets/imgs/branding/testBackground.PNG);
+        background-repeat: no-repeat;
+        background-position: 100% 100%;
+        background-size: 100% 100%;
+}
+.question{
+    font-weight: bold;
 }
 }

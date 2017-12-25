@@ -81,6 +81,21 @@ export class ContentListPage {
      }
   }
 
+  swipeEvent(e) {
+    if(e.direction == '2'){
+       if(this.currentIndex<this.subTopics[this.topic].length-1)
+       this.currentIndex = this.currentIndex+1;
+    }
+    else if(e.direction == '4'){
+       if(this.currentIndex!=0)
+       this.currentIndex = this.currentIndex-1;
+    }
+    this.subTopic = this.subTopics[this.topic][this.currentIndex];
+     if(this.topicCovered.indexOf(this.currentIndex)==-1){
+       this.topicCovered.push(this.currentIndex);
+     }
+  }
+
   goHome(){
     var minutes;
     if(this.topic == 'Android'){

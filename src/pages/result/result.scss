@@ -15,4 +15,22 @@ page-result {
     text-align: center;
     font-size: 30px;
   }
+
+  .toolbar-title,.scroll-content{
+      font-family: UbuntuRegular;
+  }
+
+  .scroll-content{
+      background-color: #ececec;
+          background-image: url(../assets/imgs/branding/backgroundImageResult.PNG);
+          background-repeat: no-repeat;
+          background-position: 100% 100%;
+          background-size: 100% 100%;
+          color: #007db1;
+  }
+
+  .resultGrid{
+    margin-top:40%;
+  }
+
 }

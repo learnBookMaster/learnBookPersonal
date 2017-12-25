@@ -1,3 +1,53 @@
 page-login {
 
+#firebaseui-auth-container form{
+        font-family: UbuntuRegular;
+        background-color: transparent;
+}
+
+.firebaseui-container {
+    background-color: transparent;
+}
+
+.content .content-md{
+    background-color: #ececec;
+}
+
+.firebaseui-title {
+    color: #fff;
+}
+
+.firebaseui-label {
+    color: #fff;
+}
+
+.firebaseui-input, .firebaseui-input-invalid {
+   color: #fff;
+ }
+
+.mdl-textfield--floating-label.is-dirty .mdl-textfield__label, .mdl-textfield--floating-label.is-focused .mdl-textfield__label {
+    color: #fff;
+}
+
+#firebaseui-auth-container{
+    margin-top: 50%;
+}
+
+.mdl-button--raised.mdl-button--colored{
+    background: #95e616;
+    border-radius: 5px;
+}
+
+.scroll-content{
+    background-color: #ececec;
+        background-image: url(../assets/imgs/branding/backgroundImageWithLogo.PNG);
+        background-repeat: no-repeat;
+        background-position: 100% 100%;
+        background-size: 100% 100%;
+}
+
+.learnBook{
+    text-align: center;
+}
+
 }

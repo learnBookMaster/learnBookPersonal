@@ -18,10 +18,10 @@
         <ion-col col-12 class="question">
           {{pageIndex+1}}. {{testJson[pageIndex].question}}
         </ion-col>
-        <ion-col col-12 class="answer"><input type="radio" name="{{pageIndex}}option1" [checked]="testJson[pageIndex].answered=='a'" (change)="onAnswerSelect('a')"> a. {{testJson[pageIndex].options.a}}</ion-col>
-        <ion-col col-12 class="answer"><input type="radio" name="{{pageIndex}}option1" [checked]="testJson[pageIndex].answered=='b'" (change)="onAnswerSelect('b')"> b. {{testJson[pageIndex].options.b}}</ion-col>
-        <ion-col col-12 class="answer"><input type="radio" name="{{pageIndex}}option1" [checked]="testJson[pageIndex].answered=='c'" (change)="onAnswerSelect('c')"> c. {{testJson[pageIndex].options.c}}</ion-col>
-        <ion-col col-12 class="answer"><input type="radio" name="{{pageIndex}}option1" [checked]="testJson[pageIndex].answered=='d'" (change)="onAnswerSelect('d')"> d. {{testJson[pageIndex].options.d}}</ion-col>
+        <ion-col col-12 class="answer"><input type="radio" name="{{pageIndex}}option1" id="{{pageIndex}}option1" [checked]="testJson[pageIndex].answered=='a'" (change)="onAnswerSelect('a')"> <label for="{{pageIndex}}option1"> a. {{testJson[pageIndex].options.a}}</label></ion-col>
+        <ion-col col-12 class="answer"><input type="radio" name="{{pageIndex}}option1" id="{{pageIndex}}option1" [checked]="testJson[pageIndex].answered=='b'" (change)="onAnswerSelect('b')"> <label for="{{pageIndex}}option1"> b. {{testJson[pageIndex].options.b}} </label> </ion-col>
+        <ion-col col-12 class="answer"><input type="radio" name="{{pageIndex}}option1" id="{{pageIndex}}option1" [checked]="testJson[pageIndex].answered=='c'" (change)="onAnswerSelect('c')"> <label for="{{pageIndex}}option1"> c. {{testJson[pageIndex].options.c}}</label></ion-col>
+        <ion-col col-12 class="answer"><input type="radio" name="{{pageIndex}}option1" id="{{pageIndex}}option1" [checked]="testJson[pageIndex].answered=='d'" (change)="onAnswerSelect('d')"> <label for="{{pageIndex}}option1"> d. {{testJson[pageIndex].options.d}}</label></ion-col>
       </ion-row>
       <!-- previous and next button -->
         <ion-row>
