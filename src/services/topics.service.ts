@@ -10,7 +10,7 @@ constructor () {}
       para1:"Native, Platform dependent",
       desc:"Android is an open source and Linux-based operating system for mobile devices such as smartphones and tablet computers. Android was developed by the Open Handset Alliance, led by Google. This tutorial will teach you basic Android programming.",
       iconUrl:"assets/imgs/android.jpg",
-      timeSpent:"0 mins",
+      timeSpent:"0:00",
       marksObtained:"0"
     },
     {
@@ -18,7 +18,7 @@ constructor () {}
       para1:"Hybrid, Platform independent",
       desc:"Cordova is a platform that is used for building mobile apps using HTML, CSS and JS. We can think of Cordova as a container for connecting our web app with native mobile functionalities . Web applications cannot use native mobile functionalities by default. This is where Cordova comes into picture. It offers a bridge for connection between web app and mobile device.",
       iconUrl:"assets/imgs/cordova.jpg",
-      timeSpent:"0 mins",
+      timeSpent:"0:00",
       marksObtained:"0"
      }];
 

@@ -44,9 +44,8 @@ export class HomePage {
        }
        if(this.navParams.get('timeSpent')){
           this.timeSpent = this.navParams.get('timeSpent');
-          this.displayTime = new Date(this.timeSpent).toISOString().substr(14, 5).split(':');
-          var displayTimeString = this.displayTime[0]+' min '+this.displayTime[1]+' sec';
-          this.topicsService.setTimeSpent(displayTimeString,this.topic);
+          this.displayTime = new Date(this.timeSpent).toISOString().substr(14, 5);
+          this.topicsService.setTimeSpent(this.displayTime,this.topic);
           }
    }
 

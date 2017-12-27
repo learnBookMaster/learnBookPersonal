@@ -14,9 +14,10 @@ export class LoginPage {
   constructor(public navCtrl: NavController, public uiProvider: FirebaseuiProvider,private firebaseAnalytics: FirebaseAnalytics) {
 
     // this.firebaseAnalytics.logEvent('loginPage', {userName: "Vipul",score:"90",timeSpend:"9 min"})
-    this.firebaseAnalytics.logEvent('loginPage', {userName: "Vipul"})
+    //var user = firebase.auth().currentUser;
+    /*this.firebaseAnalytics.logEvent('loginPage', {userName: "YOUR_NAME"})
     .then((res: any) => console.log(res))
-    .catch((error: any) => console.error(error));
+    .catch((error: any) => console.error(error));*/
 
    
   }
@@ -35,6 +36,9 @@ export class LoginPage {
           // Do something.
           // Return type determines whether we continue the redirect automatically
           // or whether we leave that to developer to handle.
+          this.firebaseAnalytics.logEvent('loginPage', {userName: currentUser})
+              .then((res: any) => console.log(res))
+              .catch((error: any) => console.error(error));
           return false;
         }
       },

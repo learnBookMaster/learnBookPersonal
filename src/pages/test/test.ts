@@ -112,10 +112,9 @@ export class TestPage {
        console.log("Minutes - " +minutes);
        console.log("Hour - " +hour);
        console.log("Days - " +days);
-        var displayTime = new Date(diff).toISOString().substr(14, 5).split(':');
-         var displayTimeString = this.displayTime[0]+' min '+this.displayTime[1]+' sec';
+       var displayTime = new Date(diff).toISOString().substr(14, 5);
 
-       this.firebaseAnalytics.logEvent("Android_Test_Complete", { Score_Obtained:  resultPercent, Passing_Score: '40', Result:  resultText, Actual_test_time: minutes+' min',Planned_test_time: '30 min'})   
+       this.firebaseAnalytics.logEvent("Android_Test_Complete", { Score_Obtained:  resultPercent, Passing_Score: '40', Result:  resultText, Actual_test_time: displayTime,Planned_test_time: '30 min'})   
        .then((res: any) => console.log(res))
        .catch((error: any) => console.error(error));
         timespent =  diff;
@@ -139,10 +138,9 @@ export class TestPage {
              console.log("Minutes - " +minutes);
              console.log("Hour - " +hour);
              console.log("Days - " +days);
-             var displayTime = new Date(diff).toISOString().substr(14, 5).split(':');
-             var displayTimeString = this.displayTime[0]+' min '+this.displayTime[1]+' sec';
+             var displayTime = new Date(diff).toISOString().substr(14, 5);
                             
-             this.firebaseAnalytics.logEvent("Cordova_Test_Complete", { Score_Obtained:  resultPercent, Passing_Score: '40', Result:  resultText, Actual_test_time: minutes+' min',Planned_test_ime: '30 min'})
+             this.firebaseAnalytics.logEvent("Cordova_Test_Complete", { Score_Obtained:  resultPercent, Passing_Score: '40', Result:  resultText, Actual_test_time: displayTime,Planned_test_ime: '30 min'})
             .then((res: any) => console.log(res))
              .catch((error: any) => console.error(error));
 

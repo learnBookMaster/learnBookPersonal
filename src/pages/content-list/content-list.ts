@@ -177,9 +177,8 @@ export class ContentListPage {
         console.log("Minutes - " +minutes);
         console.log("Hour - " +hour);
         console.log("Days - " +days);
-          var displayTime = new Date(diff).toISOString().substr(14, 5).split(':');
-          var displayTimeString = this.displayTime[0]+' min '+this.displayTime[1]+' sec';
-          this.firebaseAnalytics.logEvent("Android_Course_Complete", { Actual_Time: minutes+' min', Planned_time: '30 min'})
+          var displayTime = new Date(diff).toISOString().substr(14, 5);
+          this.firebaseAnalytics.logEvent("Android_Course_Complete", { Actual_Time: displayTime, Planned_time: '30 min'})
             .then((res: any) => console.log(res))
             .catch((error: any) => console.error(error));
 
@@ -203,9 +202,8 @@ export class ContentListPage {
              console.log("Minutes - " +minutes);
              console.log("Hour - " +hour);
              console.log("Days - " +days);
-             var displayTime = new Date(diff).toISOString().substr(14, 5).split(':');
-             var displayTimeString = this.displayTime[0]+' min '+this.displayTime[1]+' sec';
-             this.firebaseAnalytics.logEvent("Cordova_Course_Complete", { Actual_Time: minutes+' min', Planned_time: '30 min'})
+             var displayTime = new Date(diff).toISOString().substr(14, 5);
+             this.firebaseAnalytics.logEvent("Cordova_Course_Complete", { Actual_Time: displayTime, Planned_time: '30 min'})
                                   .then((res: any) => console.log(res))
                                   .catch((error: any) => console.error(error));
 
