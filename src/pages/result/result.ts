@@ -15,7 +15,7 @@ export class ResultPage {
   imageSuccess: string;
   markPercent: number;
   topic: string;
-  timeSpent: string;
+  timeSpent: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }

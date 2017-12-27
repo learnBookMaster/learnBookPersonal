@@ -6,6 +6,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { LoginPage } from '../pages/login/login';
 import * as firebase from 'firebase';
 
+import { AlertController } from 'ionic-angular';
+
 @Component({
   templateUrl: 'app.html'
 })
@@ -14,7 +16,7 @@ export class MyApp {
   rootPage:any;
   firstRun: boolean = true;
 
-  constructor(private platform: Platform, private statusBar: StatusBar, private splashScreen: SplashScreen) {
+  constructor(private platform: Platform, private statusBar: StatusBar, private splashScreen: SplashScreen, public alertCtrl: AlertController) {
 
     // Initialize Firebase
     var config = {
@@ -26,6 +28,32 @@ export class MyApp {
       messagingSenderId: "150488178728"
     };
     firebase.initializeApp(config);
+
+    this.platform.registerBackButtonAction(() => {
+        this.customHandleBackButton();
+    }, 10);
+  }
+
+  customHandleBackButton(){
+      let alertPopup = this.alertCtrl.create({
+        title: 'Confirm exit',
+        message: 'Do you want to exit the app?',
+        buttons: [
+          {
+            text: 'Cancel',
+            role: 'cancel',
+            handler: () => {
+            }
+          },
+          {
+            text: 'Yes',
+            handler: () => {
+             this.platform.exitApp();
+            }
+          }
+        ]
+      });
+      alertPopup.present();
   }
 
   ngAfterViewInit() {

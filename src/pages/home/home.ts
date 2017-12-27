@@ -19,6 +19,7 @@ export class HomePage {
     markPercent: string;
     topic: string;
     timeSpent: string;
+    displayTime: any;
     topics: {title: String, para1: String, desc: String, iconUrl: String, timeSpent: String, marksObtained: String}[] = this.topicsService.getTopics();
 
   constructor(public navCtrl: NavController,
@@ -27,34 +28,7 @@ export class HomePage {
   public menuCtrl: MenuController,
   private topicsService: TopicsService,
   public courseTimeCalcServiceAndroid: CourseTimeCalcServiceAndroid,
-  public courseTimeCalcServiceCordova: CourseTimeCalcServiceCordova) {
-    // alert(JSON.stringify(this.firebaseAnalytics));
-     //alert(this.firebaseAnalytics.logEvent("page_view",{page: "dashboard"}));
-
-    this.firebaseAnalytics.logEvent('page_view', {page: "dashboard1"})
-    .then((res: any) => console.log(res))
-    .catch((error: any) => console.error(error));
-
-    this.firebaseAnalytics.logEvent('page_view', {page: "dashboard2"})
-    .then((res: any) => console.log(res))
-    .catch((error: any) => console.error(error));
-
-    this.firebaseAnalytics.logEvent('page_view3', {page: "dashboard"})
-    .then((res: any) => console.log(res))
-    .catch((error: any) => console.error(error));
-
-     this.firebaseAnalytics.logEvent('page_view4', {page: "dashboard1"})
-    .then((res: any) => console.log(res))
-    .catch((error: any) => console.error(error));
-
-     this.firebaseAnalytics.setCurrentScreen("setCurrentScreenVIPUL")
-    .then((res: any) => console.log(res))
-    .catch((error: any) => console.error(error));
-
-    
-
-   
-  }
+  public courseTimeCalcServiceCordova: CourseTimeCalcServiceCordova) {}
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad HomePage');
@@ -70,7 +44,9 @@ export class HomePage {
        }
        if(this.navParams.get('timeSpent')){
           this.timeSpent = this.navParams.get('timeSpent');
-            this.topicsService.setTimeSpent(this.timeSpent,this.topic);
+          this.displayTime = new Date(this.timeSpent).toISOString().substr(14, 5).split(':');
+          var displayTimeString = this.displayTime[0]+' min '+this.displayTime[1]+' sec';
+          this.topicsService.setTimeSpent(displayTimeString,this.topic);
           }
    }
 

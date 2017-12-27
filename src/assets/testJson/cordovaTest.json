@@ -23,19 +23,19 @@
     "answered":""
   },
   {
-    "question": "What makes you hybrid app work like native app and access the hardware part?",
+    "question": "Which of the following is correct Ionic CLI command to get started",
     "options": {
-      "a": "Webview",
-      "b": "Cordova API’s",
-      "c": "Front-end",
-      "d": "Hardware"
+      "a": "ionic start myApp blank --v2",
+      "b": "start ionic myApp blank --v2",
+      "c": "ionic start blank myApp --v2",
+      "d": "ionic create blank myApp --v2"
     },
-    "answer": "b",
+    "answer": "a",
     "isAnswered":"false",
     "answered":""
   },
   {
-    "question": "What makes you hybrid app work like native app and access the hardware part?",
+    "question": "What makes your hybrid app work like native app and access the hardware part?",
     "options": {
       "a": "Webview",
       "b": "Cordova API’s",
