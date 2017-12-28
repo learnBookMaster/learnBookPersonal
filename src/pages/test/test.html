@@ -26,9 +26,9 @@
       <!-- previous and next button -->
         <ion-row>
           <ion-col col-3>
-            <button ion-button icon-start small (click)="pickQues('prev')" [disabled]="pageIndex==0">
+            <button ion-button icon-only small (click)="pickQues('prev')" [disabled]="pageIndex==0">
               <ion-icon name="arrow-back"></ion-icon>
-              Previous
+
             </button>
           </ion-col>
           <ion-col col-1></ion-col>
@@ -39,8 +39,8 @@
             </button>
           </ion-col>
           <ion-col col-3>
-            <button ion-button icon-end small (click)="pickQues('next')" [disabled]="pageIndex==testJson.length-1">
-              Next
+            <button ion-button icon-only small (click)="pickQues('next')" [disabled]="pageIndex==testJson.length-1">
+
               <ion-icon name="arrow-forward"></ion-icon>
             </button>
           </ion-col>
