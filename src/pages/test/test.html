@@ -25,20 +25,19 @@
       </ion-row>
       <!-- previous and next button -->
         <ion-row>
-          <ion-col col-3>
+          <ion-col col-2>
             <button ion-button icon-only small (click)="pickQues('prev')" [disabled]="pageIndex==0">
               <ion-icon name="arrow-back"></ion-icon>
 
             </button>
           </ion-col>
-          <ion-col col-1></ion-col>
-          <ion-col col-5>
+          <ion-col col-8 class="alignCenter">
             <button ion-button icon-start small (click)="submitTest()" [disabled]="disableSubmitTest">
               <ion-icon name="paper"></ion-icon>
               Submit Test
             </button>
           </ion-col>
-          <ion-col col-3>
+          <ion-col col-2>
             <button ion-button icon-only small (click)="pickQues('next')" [disabled]="pageIndex==testJson.length-1">
 
               <ion-icon name="arrow-forward"></ion-icon>
