@@ -59,6 +59,10 @@ export class HomePage {
  }
 
   logout() {
+    this.topicsService.setPercentage(0,'Android');
+    this.topicsService.setPercentage(0,'Cordova');
+    this.topicsService.setTimeSpent('0:00','Android');
+    this.topicsService.setTimeSpent('0:00','Cordova');
     firebase.auth().signOut();
   }
 
