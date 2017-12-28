@@ -91,7 +91,7 @@ export class TestPage {
     resultPercent = (result/this.testJson.length)*100;
 
     let resultText: string = 'Passed';
-    if(resultPercent < 70){
+    if(resultPercent < 50){
       resultText = 'Failed';
     }
 
@@ -114,7 +114,7 @@ export class TestPage {
        console.log("Days - " +days);
        var displayTime = new Date(diff).toISOString().substr(14, 5);
 
-       this.firebaseAnalytics.logEvent("Android_Test_Complete", { Score_Obtained:  resultPercent, Passing_Score: '40', Result:  resultText, Actual_test_time: displayTime,Planned_test_time: '30 min'})   
+       this.firebaseAnalytics.logEvent("Android_Test_Complete", { Score_Obtained:  resultPercent, Passing_Score: '50', Result:  resultText, Actual_test_time: displayTime,Planned_test_time: '30 min'})   
        .then((res: any) => console.log(res))
        .catch((error: any) => console.error(error));
         timespent =  diff;
@@ -140,7 +140,7 @@ export class TestPage {
              console.log("Days - " +days);
              var displayTime = new Date(diff).toISOString().substr(14, 5);
                             
-             this.firebaseAnalytics.logEvent("Cordova_Test_Complete", { Score_Obtained:  resultPercent, Passing_Score: '40', Result:  resultText, Actual_test_time: displayTime,Planned_test_ime: '30 min'})
+             this.firebaseAnalytics.logEvent("Cordova_Test_Complete", { Score_Obtained:  resultPercent, Passing_Score: '50', Result:  resultText, Actual_test_time: displayTime,Planned_test_ime: '30 min'})
             .then((res: any) => console.log(res))
              .catch((error: any) => console.error(error));
 

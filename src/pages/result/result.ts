@@ -27,8 +27,8 @@ export class ResultPage {
       this.markPercent = this.navParams.get('result');
       this.topic = this.navParams.get('topic');
       this.timeSpent = this.navParams.get('timeSpent');
-      if(this.markPercent < 70){
-        this.message = "Minimum passing score is 70";
+      if(this.markPercent < 50){
+        this.message = "Minimum passing score is 50";
         this.imageSuccess = "close-circle";
       }
     }
